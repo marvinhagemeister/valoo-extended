@@ -1,0 +1,27 @@
+{
+  "name": "valoo-extended",
+  "version": "0.0.1",
+  "description": "Collection of functions when working with valoo observables",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
+  "author": "Marvin Hagemeister <marvin@marvinhagemeister.de>",
+  "license": "MIT",
+  "scripts": {
+    "test": "TS_NODE_PROJECT=\"tsconfig.json\" mocha -r ts-node/register --watch-extensions ts,tsx 'src/*.test.ts'",
+    "test-watch": "yarn test --watch",
+    "build": "rimraf dist/ && tsc -p tools/tsconfig.cjs.json && tsc -p tools/tsconfig.es.json"
+  },
+  "peerDependencies": {
+    "valoo": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.4",
+    "@types/node": "^10.5.2",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2",
+    "valoo": "^2.0.0"
+  }
+}
